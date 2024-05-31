@@ -19,7 +19,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: rgba(11, 102, 124, 0.394); 
+    background-color: rgba(92, 170, 190, 0.394); 
     background-blend-mode: overlay; 
 }
 
@@ -31,8 +31,8 @@ body {
 
 main {
     flex-grow: 1;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .container {
@@ -152,8 +152,99 @@ header h1 {
     text-decoration: none;
 }
 
-/* Content Sections */
-.content-section {
+/* Content Sections - Image Top */
+.content-section-top {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #16536a;
+}
+
+.section-content-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(11, 42, 45);
+}
+
+.section-image {
+    width: 40%;
+    max-width: 50%;
+    height: auto;
+    margin: 20px;
+    border-radius: 10%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.section-text {
+    text-align: left;
+}
+
+.section-content-top p,
+.section-content-top ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Content Sections - Image Right */
+.content-section-right {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #16536a;
+}
+
+.section-content-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Increase gap for better spacing */
+    align-items: start; /* Align items to the start */
+    color: rgb(11, 42, 45);
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.section-image-right {
+    width: 65%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    border-radius: 10%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    justify-self: center; /* Align the image to the end of the grid cell */
+}
+
+.section-text {
+    text-align: left;
+    justify-self: start; /* Align the text to the start of the grid cell */
+}
+
+.section-content-right p,
+.section-content-right ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Content Sections - Image Left */
+.content-section-left {
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -163,34 +254,48 @@ header h1 {
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    color:#16536a;
+    color: #16536a;
 }
 
-.section-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.section-content-left {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
     color: rgb(11, 42, 45);
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
-.section-image {
-    max-width: 50%;
+.section-image-left {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     margin-bottom: 20px;
     border-radius: 10%;
+    grid-column: 1;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    grid-row: 1 / span 2;
 }
 
-.section-content p {
+.section-text {
+    text-align: left;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.section-content-left p,
+.section-content-left ul {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    text-align: justify;
+    margin-left: 40px;
+    text-align: left;
 }
 
-.section-content ul {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.section-content-left ul {
+    margin-left: 120px;
 }
 
 /* Footer Section */
